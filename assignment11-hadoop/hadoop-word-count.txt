@@ -1,0 +1,27 @@
+Step 1: Go to hadoop-3.3.5/sbin then open terminal
+
+Step 2: > start-all.sh
+
+Step 3: > start-dfs.sh
+
+Step 4: > start-yarn.sh
+
+Step 5: > jps
+        (list of six items should be displayed)
+	else:
+	Go to bin directory then
+	> hadoop namenode -format
+	Again repeat above steps
+
+Step 6: > hdfs dfs -mkdir /foldername
+
+Step 7: Make a text file anywhere and write some text in it
+
+Step 8: > hadoop fs -put /home/.../[path of text file] /foldername
+
+Step 9: Copy the path of jar file in [hadoop-3.3.5/share/hadoop/mapreduce/example...]
+
+Step 10: yarn jar [jar_path] wordcount /foldername /outputname
+
+Step 11: hdfs dfs -cat /outputname/part-r-00000
+

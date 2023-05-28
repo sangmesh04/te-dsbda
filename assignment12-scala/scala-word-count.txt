@@ -1,0 +1,20 @@
+Step 1: Open terminal
+
+Step 2: > spark-shell
+
+Step 3: Create a text file and write some text in it. Copy the file path.
+
+Step 4: scala> var x = sc.textFile('/home/[filepath]')
+
+Step 5: scala> var y = x.flatMap(_.split(" "))
+
+Step 6: scala> var z = y.map((_, 1))
+
+Step 7: scala> var w = z.reduceByKey(_+_)
+
+Step 8: scala> w.saveAsTextFile('output.txt')
+
+Step 9: w.foreach(println)
+...
+...
+...
